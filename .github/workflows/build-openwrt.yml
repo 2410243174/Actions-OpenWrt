@@ -82,8 +82,6 @@ jobs:
         ../$DIY_SH
         make defconfig
 
-
-
     - name: Download package
       id: package
       run: |
