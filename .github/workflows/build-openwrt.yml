@@ -51,8 +51,9 @@ jobs:
 
     - name: SSH connection to Actions
       uses: P3TERX/debugger-action@master
-   
-   - name: Free up disk space
+      if: env.SSH_ACTIONS == 'true'
+
+- name: Free up disk space
       if: env.FREE_UP_DISK == 'true'
       env:
         DEBIAN_FRONTEND: noninteractive
